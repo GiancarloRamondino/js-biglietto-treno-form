@@ -2,6 +2,7 @@
 function calcola(){
     let km = parseFloat(document.getElementById('km-field').value);
     let anni = document.getElementById('anni-field').value;
+    const button = document.getElementById('btn');
 
     if (isNaN(km) || km <= 0) {
         console.error("Inserire un valore valido per i chilometri.");
@@ -24,11 +25,56 @@ function calcola(){
     } else {
         finalPrice = price;
     }
-    console.log("Il prezzo è di " + (finalPrice).toFixed(2) + "€");// concatenazione di stringhe con le " " e il +//
-    //console.log( `Il prezzo è di ${finalPrice}€`); //interpolazione di stringhe con il backtick ` e il ${}
-    //console.log( 'Il prezzo è di ' + finalPrice + '€');// concatenazione di stringhe con l'apostrofo '' e il +
+    console.log("Il prezzo è di " + (finalPrice).toFixed(2) + "€");
+    
+    //costo-biglietto
+    let ticketCosto = finalPrice.toFixed(2) + "€";
+    console.log(ticketCosto);
+    document.getElementById('costo-biglietto').innerText = ticketCosto;
 }
 document.getElementById('btn').addEventListener('click', calcola);
+
+
+//nome
+const input = document.getElementById('name-field');
+const button = document.getElementById('btn');
+
+button.addEventListener('click', function(){
+    let name = input.value.trim();
+    console.log(name);
+    document.getElementById('nome-passeggero').innerText = name;
+});
+
+//offerta
+const input3 = document.getElementById('anni-field');
+const button3 = document.getElementById('btn');
+
+button3.addEventListener('click', function(){
+    let name3 = "Biglietto " + input3.value.trim();
+    console.log(name3);
+    document.getElementById('offerta').innerText = name3;
+});
+
+//carrozza
+const button4 = document.getElementById('btn');
+
+button4.addEventListener('click', function(){
+    let randomCarrozza = Math.floor(Math.random() * 10) + 1; // Generate random number between 1 and 10
+    console.log(randomCarrozza);
+    document.getElementById('carrozza').innerText = randomCarrozza;
+});
+//codice-cp
+const button5 = document.getElementById('btn');
+
+button5.addEventListener('click', function(){
+    let randomCode = Math.floor(Math.random() * 10000) + 1; // Generate random train code
+    console.log(randomCode);
+    document.getElementById('codice-treno').innerText = randomCode;
+});
+
+
+
+
 
 
 
