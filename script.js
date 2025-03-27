@@ -28,19 +28,17 @@ function calcola(){
     console.log("Il prezzo è di " + (finalPrice).toFixed(2) + "€");
     
     //costo-biglietto
-    let ticketCosto = finalPrice.toFixed(2) + "€";
-    console.log(ticketCosto);
-    document.getElementById('costo-biglietto').innerText = ticketCosto;
+    document.getElementById('costo-biglietto').innerText = finalPrice.toFixed(2) + "€";
 }
 document.getElementById('btn').addEventListener('click', calcola);
 
 //Dichiara variabili
 //nome
 const input = document.getElementById('name-field');
-const button = document.getElementById('btn');
 //offerta
 const input3 = document.getElementById('anni-field');
-
+//bottone
+const button = document.getElementById('btn');
 
 //aggiungi eventi al click in vista
 
