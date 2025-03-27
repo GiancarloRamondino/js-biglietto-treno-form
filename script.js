@@ -34,43 +34,41 @@ function calcola(){
 }
 document.getElementById('btn').addEventListener('click', calcola);
 
-
+//Dichiara variabili
 //nome
 const input = document.getElementById('name-field');
 const button = document.getElementById('btn');
+//offerta
+const input3 = document.getElementById('anni-field');
+
+
+//aggiungi eventi al click in vista
 
 button.addEventListener('click', function(){
     let name = input.value.trim();
     console.log(name);
     document.getElementById('nome-passeggero').innerText = name;
-});
-
-//offerta
-const input3 = document.getElementById('anni-field');
-const button3 = document.getElementById('btn');
-
-button3.addEventListener('click', function(){
+    //offerta
     let name3 = "Biglietto " + input3.value.trim();
     console.log(name3);
     document.getElementById('offerta').innerText = name3;
-});
-
-//carrozza
-const button4 = document.getElementById('btn');
-
-button4.addEventListener('click', function(){
+    //carrozza
     let randomCarrozza = Math.floor(Math.random() * 10) + 1; // Generate random number between 1 and 10
     console.log(randomCarrozza);
     document.getElementById('carrozza').innerText = randomCarrozza;
-});
-//codice-cp
-const button5 = document.getElementById('btn');
-
-button5.addEventListener('click', function(){
+    //codice-cp
     let randomCode = Math.floor(Math.random() * 10000) + 1; // Generate random train code
     console.log(randomCode);
     document.getElementById('codice-treno').innerText = randomCode;
 });
+
+
+
+
+
+
+
+
 
 
 
